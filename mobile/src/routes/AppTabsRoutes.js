@@ -3,8 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 
 import Home from '../pages/Home';
-import Management from '../pages/Management';
 import Chat from '../pages/Chat';
+import Management from '../pages/Management';
+import Notification from '../pages/Notification';
 import Profile from '../pages/Profile';
 
 const AppTabs = createBottomTabNavigator();
@@ -20,11 +21,14 @@ function MainTabs() {
             case 'Home':
               iconName = focused ? 'home' : 'home';
               break;
-            case 'Management':
-              iconName = focused ? 'list-alt' : 'list-alt';
-              break;
             case 'Chat':
               iconName = focused ? 'wechat' : 'wechat';
+              break;
+            case 'Management':
+              iconName = focused ? 'list' : 'list';
+              break;
+            case 'Notification':
+              iconName = focused ? 'bell' : 'bell';
               break;
             case 'Profile':
               iconName = focused ? 'user' : 'user';
@@ -36,12 +40,17 @@ function MainTabs() {
         },
       })}
       tabBarOptions={{
-        activeTintColor: '#4169E1',
+        activeTintColor: '#FCC419',
         inactiveTintColor: 'gray',
       }}>
       <AppTabs.Screen options={{ title: 'Inicio' }} name="Home" component={Home} />
-      <AppTabs.Screen options={{ title: 'Gerenciar' }} name="Management" component={Management} />
       <AppTabs.Screen options={{ title: 'Mensagens' }} name="Chat" component={Chat} />
+      <AppTabs.Screen options={{ title: 'Gerenciar' }} name="Management" component={Management} />
+      <AppTabs.Screen
+        options={{ title: 'Notification' }}
+        name="Notification"
+        component={Notification}
+      />
       <AppTabs.Screen options={{ title: 'Perfil' }} name="Profile" component={Profile} />
     </AppTabs.Navigator>
   );
