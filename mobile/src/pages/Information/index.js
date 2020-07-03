@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   slide: {
     flex: 1,
     backgroundColor: 'white',
-    paddingHorizontal: 20,
+    paddingHorizontal: 5,
     alignItems: 'center',
   },
   ilustration: {
     width: '100%',
-    marginTop: 30,
+    marginTop: 60,
   },
   header: {
     width: '100%',
@@ -96,9 +96,8 @@ class DotBallActive extends Component {
 
 export default class SwiperComponent extends Component {
   state = {
-    index: 0,
     bgColor: '#11969f',
-    Texto: 'Próximo',
+    Texto: 'Pular',
     bgColorIcon: '#FFF',
   };
   render() {
@@ -108,9 +107,13 @@ export default class SwiperComponent extends Component {
       <View style={styles.wrapper}>
         <Swiper showsButtons={false} loop={false} dot={<DotBall />} activeDot={<DotBallActive />}>
           <View style={styles.slide}>
-            <TouchableOpacity style={styles.header} activeOpacity={0.7}>
-              <Text style={styles.nextText}>Pular</Text>
-            </TouchableOpacity>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -127,9 +130,13 @@ export default class SwiperComponent extends Component {
           </View>
 
           <View style={styles.slide}>
-            <View style={styles.header}>
-              <Text style={styles.nextText}>Pular</Text>
-            </View>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -146,9 +153,13 @@ export default class SwiperComponent extends Component {
           </View>
 
           <View style={styles.slide}>
-            <View style={styles.header}>
-              <Text style={styles.nextText}>Pular</Text>
-            </View>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -164,9 +175,13 @@ export default class SwiperComponent extends Component {
           </View>
 
           <View style={styles.slide}>
-            <View style={styles.header}>
-              <Text style={styles.nextText}>Pular</Text>
-            </View>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -183,9 +198,13 @@ export default class SwiperComponent extends Component {
           </View>
 
           <View style={styles.slide}>
-            <View style={styles.header}>
-              <Text style={styles.nextText}>Pular</Text>
-            </View>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -202,9 +221,13 @@ export default class SwiperComponent extends Component {
           </View>
 
           <View style={styles.slide}>
-            <View style={styles.header}>
-              <Text style={styles.nextText}>Pular</Text>
-            </View>
+            <ButtonAdvance
+              setIndex={this.setState}
+              bgColor={bgColor}
+              Texto={Texto}
+              bgColorIcon={bgColorIcon}
+              navigation={navigation}
+            />
             <Image
               resizeMode="contain"
               style={styles.ilustration}
@@ -220,12 +243,6 @@ export default class SwiperComponent extends Component {
             </View>
           </View>
         </Swiper>
-        <ButtonAdvance
-          bgColor={bgColor}
-          Texto={Texto}
-          bgColorIcon={bgColorIcon}
-          navigation={navigation}
-        />
       </View>
     );
   }

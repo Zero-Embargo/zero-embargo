@@ -1,5 +1,4 @@
-import React from 'react';
-import { RectButton } from 'react-native-gesture-handler';
+import React, { useState } from 'react';
 import { Feather } from '@expo/vector-icons';
 
 import { Footer, TextoAction, CircleButton } from './styles';
