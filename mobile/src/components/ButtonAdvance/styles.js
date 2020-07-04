@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
-export const Footer = styled.View`
+export const Button = styled.View`
   width: 100%;
   height: auto;
   flex-direction: row;

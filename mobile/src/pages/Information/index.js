@@ -108,7 +108,6 @@ export default class SwiperComponent extends Component {
         <Swiper showsButtons={false} loop={false} dot={<DotBall />} activeDot={<DotBallActive />}>
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}
@@ -131,7 +130,6 @@ export default class SwiperComponent extends Component {
 
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}
@@ -154,7 +152,6 @@ export default class SwiperComponent extends Component {
 
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}
@@ -176,7 +173,6 @@ export default class SwiperComponent extends Component {
 
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}
@@ -199,7 +195,6 @@ export default class SwiperComponent extends Component {
 
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}
@@ -222,7 +217,6 @@ export default class SwiperComponent extends Component {
 
           <View style={styles.slide}>
             <ButtonAdvance
-              setIndex={this.setState}
               bgColor={bgColor}
               Texto={Texto}
               bgColorIcon={bgColorIcon}

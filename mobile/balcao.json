@@ -1,0 +1,62 @@
+{
+  "balcao": {
+    "profissionais": [
+      {
+        "id": 1,
+        "title": "Fiscalização de Obras",
+        "subtitle": "Fiscalização Projetos e Obras",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 2,
+        "title": "Vigilancia Sanitária",
+        "subtitle": "Fiscalização Sanitária",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 3,
+        "title": "Departamento de Agua e Esgoto",
+        "subtitle": "Saneamento",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 4,
+        "title": "Serviços Públicos",
+        "subtitle": "Estradas, Vias e Iluminação",
+        "description": "Ok! Obrigada."
+      }
+    ],
+    "prefeitura": [
+      {
+        "id": 1,
+        "title": "João Santos",
+        "subtitle": "Bairro Ubá",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 2,
+        "title": "Davilson Junior",
+        "subtitle": "Bairro Centro",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 3,
+        "title": "Wesley Lacerda",
+        "subtitle": "Planalto",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 4,
+        "title": "Larissa  Santos",
+        "subtitle": "Centro",
+        "description": "Ok! Obrigada."
+      },
+      {
+        "id": 5,
+        "title": "Willen  Santos",
+        "subtitle": "Cianelli",
+        "description": "Ok! Obrigada."
+      }
+    ]
+  }
+}
