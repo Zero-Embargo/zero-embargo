@@ -6,6 +6,8 @@ import Auth from '../pages/Auth';
 import SignUp1 from '../pages/SignUp/SignUp1/index';
 import SignUp2 from '../pages/SignUp/SignUp2/index';
 import SignUp3 from '../pages/SignUp/SignUp3/index';
+import Talk from '../pages/Talk';
+import ListProfile from '../pages/ListProfile';
 
 import MainTabs from './AppTabsRoutes';
 
@@ -25,6 +27,8 @@ function MainStack() {
       <AppStack.Screen name="SignUp1" component={SignUp1} />
       <AppStack.Screen name="SignUp2" component={SignUp2} />
       <AppStack.Screen name="SignUp3" component={SignUp3} />
+      <AppStack.Screen name="Talk" component={Talk} />
+      <AppStack.Screen name="ListProfile" component={ListProfile} />
     </AppStack.Navigator>
   );
 }

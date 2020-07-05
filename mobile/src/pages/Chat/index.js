@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
-import { Feather } from '@expo/vector-icons';
-import { Container, Title } from './styles';
+import { SwipeListView } from 'react-native-swipe-list-view';
+import {
+  Container,
+  Title,
+  Swipe,
+  ChatContainer,
+  ChatTitle,
+  ChatSubtitle,
+  ChatDescription,
+  ChatTime,
+  Ball,
+} from './styles';
 
 import Header from '../../components/Header';
 import json from '../../../balcao.json';
+import Button from '../../components/Button';
 
 export default class Chat extends Component {
   state = {
@@ -12,29 +22,49 @@ export default class Chat extends Component {
   }
 
   componentDidMount() {
-    const response = json.balcao.profissionais;
+    const list = json.balcao.profissionais;
 
-    this.setState({ list: response });
+    this.setState({ list });
   }
 
-  renderItem = (item) => {
+  renderList = (item) => {
+    const { navigation } = this.props;
     return (
-
+      <ChatContainer onPress={() => navigation.navigate('Talk')}>
+        <ChatSubtitle>{item.subtitle}</ChatSubtitle>
+        <ChatTitle>{item.title}</ChatTitle>
+        <ChatDescription>{item.description}</ChatDescription>
+        <ChatTime>1h atrás</ChatTime>
+      </ChatContainer>
     );
   }
+
+  renderSwipe = (item) => {
+    return (
+      <Swipe source={require('../../assets/utilities/left.png')}>
+        <Ball />
+      </Swipe>
+    );
+  }
+
   render() {
+    const { list } = this.state;
+
     return (
       <>
         <Header>
-          <Feather name="arrow-left" size={32} color="#FFF" />
           <Title>balcão Online</Title>
         </Header>
         <Container>
-          <FlatList
+          <SwipeListView
+            style={{ marginBottom: 20 }}
             data={list}
-            renderItem={({ item }) => this.renderItem(item)}
+            renderItem={({ item }) => this.renderList(item)}
+            renderHiddenItem={({ item }) => this.renderSwipe(item)}
+            leftOpenValue={65}
             keyExtractor={item => item.id}
           />
+          <Button bgColor="#FCC419" Texto="Canal de Denuncia" navigation={this.props.navigation} routeName="Talk" />
         </Container>
       </>
     );

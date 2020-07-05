@@ -24,24 +24,10 @@ import {
 export default class Home extends Component {
   state = {
     search: '',
-    data: [
-      {
-        id: 1,
-      },
-      {
-        id: 2,
-      },
-      {
-        id: 3,
-      },
-      {
-        id: 4,
-      },
-    ],
   };
 
   render() {
-    const { data } = this.state;
+    const { search } = this.state;
     return (
       <Container source={require('../../assets/utilities/background.jpg')}>
         <Header>
